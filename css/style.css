@@ -1,5 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap");
-
+:root {
+  --primary-color: hsl(257, 40%, 49%);
+  --secondary-color: hsl(300, 69%, 71%);
+}
 * {
   margin: 0;
   padding: 0;
@@ -11,5 +14,12 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 100vh;
-  background-color: hsl(257, 40%, 49%);
+  background-color: var(--primary-color);
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+.container {
+  padding: 30px 40px;
 }
