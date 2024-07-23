@@ -2,6 +2,7 @@
 :root {
   --primary-color: hsl(257, 40%, 49%);
   --secondary-color: hsl(300, 69%, 71%);
+  --neutral-clr: white;
 }
 * {
   margin: 0;
@@ -13,7 +14,7 @@ body {
   background-image: url(https://digitshack.com/codepen/mentor7/bg-desktop.svg);
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 100vh;
+
   background-color: var(--primary-color);
 }
 img {
@@ -22,22 +23,22 @@ img {
 }
 
 h1 {
-  font-family: "Open Sans", sans-serif;
   color: white;
-  font-weight: 400;
+  font-family: "Open Sans", sans-serif;
 }
 p {
   color: white;
   opacity: 0.8;
 }
 button {
-  background-color: #ffffff;
+  background-color: var(--neutral-clr);
+  padding-top: 16px;
+  padding-bottom: 16px;
+  border-radius: 9999px;
+  border: 0;
+  width: 58.333333%;
   color: var(--primary-color);
-  border-radius: 20px;
-  padding: 16px 54px;
-  font-size: 1.4rem;
-  border: none;
-  cursor: pointer;
+  text-transform: capitalize;
 }
 ul {
   display: flex;
@@ -50,16 +51,62 @@ ul i {
   color: white;
 }
 ul a {
-  height: 60px;
-  width: 60px;
-  padding: 5px;
+  height: 80px;
+  width: 80px;
+  padding: 10px;
   border: 1px solid white;
   border-radius: 50%;
+}
+.logo {
+  width: 100px;
+  margin-bottom: 40px;
+}
+.illustration {
+  margin-bottom: 40px;
 }
 
 .container {
   padding: 30px 40px;
+  min-height: 100vh;
 }
+
 .content {
   text-align: center;
+}
+
+.content-heading {
+  margin-bottom: 15px;
+  margin-top: 10px;
+  font-size: 25px;
+  text-transform: capitalize;
+  font-weight: bold;
+  line-height: 1;
+  line-height: 1.5;
+}
+.content-des {
+  margin-bottom: 15px;
+  opacity: 0.5;
+}
+.social-app {
+  margin-top: 30px;
+  margin-bottom: 25px;
+}
+@media (min-width: 1024px) {
+  .grid_layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+
+    border: 2px solid green;
+  }
+  .content {
+    padding: 30px;
+    text-align: left;
+  }
+  .content-heading {
+    max-width: 50pxg;
+  }
+  ul {
+    justify-content: flex-end;
+  }
 }
